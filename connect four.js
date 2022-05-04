@@ -97,12 +97,12 @@
    // place piece in board and add to HTML table
    board[y][x] = currPlayer;
    placeInTable(y, x);
-   
+ 
    // check for win
    if (checkForWin()) {
      return endGame(`Player ${currPlayer} won!`);
    }
-   
+ 
    // check for tie
    if (board.every(row => row.every(cell => cell))) {
      return endGame('Tie!');
@@ -149,3 +149,4 @@
  
  makeBoard();
  makeHtmlBoard();
+ 
